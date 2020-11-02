@@ -20,26 +20,25 @@ console.log(name + ", " + "Ваш возраст " + sum());
 
 var a = +prompt('Сколько примеров вы хотите решить?');
 function rand(max){
-    return Math.floor(Math.random() * max);
+    return Math.floor(Math.random() * (max + 1 - 1) + 1);
 }
 var max = 20;
-var b = rand(max);
-var c = rand(max);
 
 for (i = 0; i < a; i++) {
     var b = rand(max);
     var c = rand(max);
+    var e = Math.floor(Math.random() * ( 4 + 1 - 1) + 1)
 
-    if (b < 5 || c < 3) {
+    if (e == 1) {
         var sum = b + c;
         var d = prompt("Дайте правильный ответ:" + b + "+" + c + "=");
-    } else if (b > 5 && c < 6) {
+    } else if (e == 2) {
         var sum = b - c;
         var d = prompt("Дайте правильный ответ:" + b + "-" + c + "=");
-    } else if (b > 10 || b < 15 && c < 10) {
+    } else if (e == 3) {
         var sum = b * c;
         var d = prompt("Дайте правильный ответ:" + b + "*" + c + "=");
-    } else if (b > 15 && c < 5) {
+    } else if (e == 4) {
         var sum = b / c;
         var d = prompt("Дайте правильный ответ:" + b + "/" + c + "=");
     }
