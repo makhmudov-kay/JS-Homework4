@@ -20,14 +20,14 @@ console.log(name + ", " + "Ваш возраст " + sum());
 
 var a = +prompt('Сколько примеров вы хотите решить?');
 function rand(max){
-    return Math.floor(Math.random() * (max + 1 - 1) + 1);
+    return Math.floor(Math.random() * max + 1);
 }
 var max = 20;
 
 for (i = 0; i < a; i++) {
     var b = rand(max);
     var c = rand(max);
-    var e = Math.floor(Math.random() * ( 4 + 1 - 1) + 1)
+    var e = Math.floor(Math.random() * 4 + 1)
 
     if (e == 1) {
         var sum = b + c;
